@@ -1,0 +1,39 @@
+{% extends "nobg-template.html" %}
+
+{% block content %} 
+<form action="" method="POST">
+    <div class="flex justify-center">
+        <div class="w-2/3">
+            <fieldset>
+                <div class="sm:col-span-4 mb-8">
+                    <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Jméno receptu</label>
+                    <div class="mt-2">
+                      <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 bg-white focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                        <input type="text" name="name" id="name" required class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="Boloňská omáčka na špagety">
+                      </div>
+                    </div>
+                </div>
+                <div class="sm:col-span-4 mb-8">
+                  <label for="ingredients" class="block text-sm font-medium leading-6 text-gray-900">Ingredience</label>
+                  <div class="mt-2">
+                    <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 bg-white focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                      <textarea type="text" name="ingredients" id="ingredients" required class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="mleté maso 500g, konzerva krájených rajčat, rajský protlak 70g, 1 cibule"></textarea>
+                    </div>
+                  </div>
+              </div>
+                <div class="sm:col-span-4 mb-8">
+                    <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Postup</label>
+                    <div class="mt-2">
+                      <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 bg-white focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                        <textarea type="text" name="description" id="description" required class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0"></textarea>
+                      </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="mt-6 flex items-center gap-x-6">
+                <button type="submit" class="rounded-md bg-sky-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">Potvrdit</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

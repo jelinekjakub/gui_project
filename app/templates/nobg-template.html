@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="32x32" rel="icon" href="../static/img/favicon.png">
+    <title>Recipes</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 flex flex-col h-screen">
+    <header class="inset-x-0 top-0 z-50 bg-white">
+        <nav class="flex items-center justify-between p-6 lg:px-16">
+            <div class="flex gap-x-12">
+                <a href="{{  url_for('route.index')  }}" class="text-sm font-semibold leading-6 text-gray-900">Domů</a>
+                <a href="{{  url_for('route.recipes')  }}" class="text-sm font-semibold leading-6 text-gray-900">Receptář</a>
+                <a href="{{  url_for('route.add_recipe')  }}" class="text-sm font-semibold leading-6 text-gray-900">Přidat recept</a>
+                {% if session['auth'] %}
+                <a href="{{  url_for('route.user_recipes', user_id=session['user']['_id'])  }}" class="text-sm font-semibold leading-6 text-gray-900">Moje recepty</a>
+                {% endif %}
+            </div>
+            {% if session['auth'] %}
+            <div class="flex gap-x-6">
+                <span class="text-sm leading-6 text-gray-500">{{  session['user']['email']  }}</span>
+                <a href="{{  url_for('route.logout')  }}" class="text-sm font-semibold leading-6 text-gray-900">Odhlásit se</a>
+            </div>
+            {% else %}
+            <div class="flex gap-x-6">
+                <a href="{{  url_for('route.login')  }}" class="text-sm font-semibold leading-6 text-gray-900">Přihlásit</a>
+                <a href="{{  url_for('route.register')  }}" class="text-sm font-semibold leading-6 text-gray-900">Registrovat se</a>
+            </div>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="p-5">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="bg-white mt-auto">
+        <div>
+            <div class="max-w-2xl mx-auto text-white text-center">
+                <div class="py-8 flex-row justify-between items-center text-sm text-gray-400">
+                    <p class="mt-0"> &copy; Jakub Jelínek, 2023. </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
