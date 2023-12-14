@@ -15,9 +15,9 @@ import seeders.recipes_seeder
 # Routes
 from app.routes import bp
 app.register_blueprint(bp)
-
+print(Config().get("APP_DEBUG"))
 if __name__ == '__main__':
-    app.run(debug=True, host=Config().get("APP_HOST", "0.0.0.0"), port=Config().get("APP_PORT", 5000))
+    app.run(debug=False, host=Config().get("APP_HOST", "0.0.0.0"), port=Config().get("APP_PORT", 5000))
 
 
 
