@@ -1,4 +1,4 @@
-# Project Title
+# Receptář
 
 Recipes webpage
 
