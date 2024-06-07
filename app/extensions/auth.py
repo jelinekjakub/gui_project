@@ -1,6 +1,7 @@
 from flask import session, redirect, url_for
 import wrapt
 
+
 # Decorators
 @wrapt.decorator
 def auth(wrapped, instance, args, kwargs):

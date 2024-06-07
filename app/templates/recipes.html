@@ -28,15 +28,15 @@
             <div class="flex justify-between item-center">
                 <p class="text-gray-500 font-medium hidden md:block">Recept</p>
                 <div class="flex items-center">
-                    <span class="text-gray-500 font-normal">{{ datetime.fromisoformat(recipe["date"]).strftime("%H:%M %d.%m.%Y") }}</span>
+                    <span class="text-gray-500 font-normal">{{ recipe.date.strftime("%H:%M %d.%m.%Y") }}</span>
                 </div>
-                <a href="{{url_for('route.user_recipes', user_id=recipe['author']['_id'])  }}" class="bg-gray-200 px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">{{
-                    recipe["author"]["name"] }}</a>
+                <a href="{{url_for('route.user_recipes', user_id=recipe.user.id)  }}" class="bg-gray-200 px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">{{
+                    recipe.user.name }}</a>
             </div>
-            <h3 class="font-black text-gray-800 md:text-3xl text-xl">{{ recipe["name"] }}</h3>
+            <h3 class="font-black text-gray-800 md:text-3xl text-xl">{{ recipe.name }}</h3>
             <span class="font-normal text-gray-600 text-base text-xs">Ingredience:</span>
-            <span class="font-normal text-gray-600 text-base">{{ recipe["ingredients"] }}</span>
-            <p class="md:text-lg text-gray-500 text-base">{{ recipe["description"] }}</p>
+            <span class="font-normal text-gray-600 text-base">{{ recipe.ingredients }}</span>
+            <p class="md:text-lg text-gray-500 text-base">{{ recipe.description }}</p>
         </div>
     </div>
     {% else %}
