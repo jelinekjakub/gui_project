@@ -1,5 +1,5 @@
 from flask import Flask
-from extensions.env import Config
+from app.env import Config
 from app.routes import bp
 
 # App init

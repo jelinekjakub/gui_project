@@ -35,8 +35,8 @@
             </div>
             <h3 class="font-black text-gray-800 md:text-3xl text-xl">{{ recipe.name }}</h3>
             <span class="font-normal text-gray-600 text-base text-xs">Ingredience:</span>
-            <span class="font-normal text-gray-600 text-base">{{ recipe.ingredients }}</span>
-            <p class="md:text-lg text-gray-500 text-base">{{ recipe.description }}</p>
+            <span class="font-normal text-gray-600 text-base whitespace-pre-wrap">{{ recipe.ingredients }}</span>
+            <p class="md:text-lg text-gray-500 text-base whitespace-pre-wrap">{{ recipe.description }}</p>
         </div>
     </div>
     {% else %}

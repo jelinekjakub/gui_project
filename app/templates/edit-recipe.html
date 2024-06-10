@@ -9,7 +9,7 @@
                     <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Jméno receptu</label>
                     <div class="mt-2">
                       <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 bg-white focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                        <input type="text" name="name" id="name" value="{{  recipe['name']  }}" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="{{  recipe['name']  }}">
+                        <input type="text" name="name" id="name" value="{{  recipe.name  }}" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="{{  recipe['name']  }}">
                       </div>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                   <label for="ingredients" class="block text-sm font-medium leading-6 text-gray-900">Ingredience</label>
                   <div class="mt-2">
                     <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 bg-white focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                      <textarea type="text" name="ingredients" id="ingredients" required class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="{{  recipe['ingredients']  }}">{{  recipe['ingredients']  }}</textarea>
+                      <textarea name="ingredients" id="ingredients" required class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="{{  recipe['ingredients']  }}">{{  recipe.ingredients  }}</textarea>
                     </div>
                   </div>
               </div>
@@ -25,7 +25,7 @@
                     <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Postup</label>
                     <div class="mt-2">
                       <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 bg-white focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                        <textarea type="text" name="description" id="description" required class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="{{  recipe['description']  }}">{{  recipe['description']  }}</textarea>
+                        <textarea type="text" name="description" id="description" required class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus-visible:outline-0" placeholder="{{  recipe['description']  }}">{{  recipe.description  }}</textarea>
                       </div>
                     </div>
                 </div>

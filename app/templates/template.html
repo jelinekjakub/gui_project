@@ -18,7 +18,7 @@
                 <a href="{{  url_for('route.recipes')  }}" class="text-sm font-semibold leading-6 text-gray-900">Receptář</a>
                 <a href="{{  url_for('route.add_recipe')  }}" class="text-sm font-semibold leading-6 text-gray-900">Přidat recept</a>
                 {% if session['auth'] %}
-                <a href="{{  url_for('route.user_recipes', user_id=session['user']['_id'])  }}" class="text-sm font-semibold leading-6 text-gray-900">Moje recepty</a>
+                <a href="{{  url_for('route.user_recipes', user_id=session['user']['id'])  }}" class="text-sm font-semibold leading-6 text-gray-900">Moje recepty</a>
                 {% endif %}
             </div>
             {% if session['auth'] %}

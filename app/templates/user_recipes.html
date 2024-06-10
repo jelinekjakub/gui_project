@@ -3,7 +3,7 @@
 {% block content %}
 <div class="flex flex-col justify-center gap-y-6">
     {% if session['user'] %}
-        {% if session['user']['_id'] == user_id %}
+        {% if session['user']['id'] == user_id %}
         <div class="text-center">
             <a href="{{  url_for('route.add_recipe')  }}">
                 <button type="submit" class="p-2 inline w-auto rounded-full bg-white text-gray-800 focus:outline-none focus:shadow-outline  hover:bg-gray-300" title="Přidat recept">
@@ -23,28 +23,30 @@
             <div class="flex justify-between item-center">
                 <p class="text-gray-500 font-medium hidden md:block">Recept</p>
                 <div class="flex items-center">
-                    <span class="text-gray-500 font-normal">{{ datetime.fromisoformat(recipe["date"]).strftime("%H:%M %d.%m.%Y") }}</span>
+                    <span class="text-gray-500 font-normal">{{ recipe.date.strftime("%H:%M %d.%m.%Y") }}</span>
                 </div>
-                <a href="{{url_for('route.user_recipes', user_id=recipe['author']['_id'])  }}" class="bg-gray-200 px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">{{
-                    recipe["author"]["name"] }}</a>
+                <a href="{{url_for('route.user_recipes', user_id=recipe.user.id)  }}" class="bg-gray-200 px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">{{
+                    recipe.user.name }}</a>
             </div>
-            <h3 class="font-black text-gray-800 md:text-3xl text-xl">{{ recipe["name"] }}</h3>
+            <h3 class="font-black text-gray-800 md:text-3xl text-xl">{{ recipe.name }}</h3>
             <span class="font-normal text-gray-600 text-base text-xs">Ingredience:</span>
-            <span class="font-normal text-gray-600 text-base">{{ recipe["ingredients"] }}</span>
-            <p class="md:text-lg text-gray-500 text-base">{{ recipe["description"] }}</p>
-            {% if session['user'] == recipe['author'] %}
-            <div class="inline-flex mb-5 !mt-14">
-                <form action="{{  url_for('route.edit_recipe', id=recipe['_id'])  }}" class="w-1/2">
-                    <button type="submit" class="w-full rounded-l-lg border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10">
-                        Upravit recept
-                    </button>
-                </form>
-                <form action="{{  url_for('route.remove_recipe', id=recipe['_id'])  }}" class="w-1/2">
-                    <button type="submit" class="w-full rounded-r-md border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10">
-                        Odstranit recept
-                    </button>
-                </form>
-            </div>
+            <span class="font-normal text-gray-600 text-base whitespace-pre-wrap">{{ recipe.ingredients }}</span>
+            <p class="md:text-lg text-gray-500 text-base whitespace-pre-wrap">{{ recipe.description }}</p>
+            {% if session['user'] %}
+                {% if session['user']['id'] == recipe.user.id %}
+                <div class="inline-flex mb-5 !mt-14">
+                    <form action="{{  url_for('route.edit_recipe', id=recipe.id)  }}" class="w-1/2">
+                        <button type="submit" class="w-full rounded-l-lg border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10">
+                            Upravit recept
+                        </button>
+                    </form>
+                    <form action="{{  url_for('route.remove_recipe', id=recipe.id)  }}" class="w-1/2">
+                        <button type="submit" class="w-full rounded-r-md border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10">
+                            Odstranit recept
+                        </button>
+                    </form>
+                </div>
+                {% endif %}
             {% endif %}
         </div>
     </div>

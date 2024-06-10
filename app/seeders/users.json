@@ -1,0 +1,32 @@
+[
+    {
+        "name": "test_user",
+        "email": "test@test.cz",
+        "password": "123456789"
+    },
+    {
+        "name": "Alice Nováková",
+        "email": "alice@example.com",
+        "password": "securepassword1"
+    },
+    {
+        "name": "Bob Novák",
+        "email": "bob@example.com",
+        "password": "strongpassword2"
+    },
+    {
+        "name": "Charlie Dvořák",
+        "email": "charlie@example.com",
+        "password": "safepassword3"
+    },
+    {
+        "name": "David Svoboda",
+        "email": "david@example.com",
+        "password": "password4"
+    },
+    {
+        "name": "Eva Černá",
+        "email": "eva@example.com",
+        "password": "secretword5"
+    }
+]

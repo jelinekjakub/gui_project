@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Špagety Boloňská omáčka",
+        "ingredients": "200g špagety, 300g mleté hovězí maso, 1 cibule, 2 stroužky česneku, 400g konzervovaných rajčat, 1 lžička oregána, sůl, pepř",
+        "description": "1. Uvařte špagety podle pokynů na obalu. \n2. Na pánvi osmažte mleté hovězí maso s nakrájenou cibulí a česnekem. \n3. Přidejte konzervovaná rajčata a okořeňte oregánem, solí a pepřem. \n4. Vařte, dokud omáčka nezhoustne. \n5. Podávejte omáčku ke uvařeným špagetám."
+    },
+    {
+        "name": "Kuřecí Alfredo",
+        "ingredients": "250g fettuccine, 2 kuřecí prsa, 1 šálek smetany ke šlehání, 1 šálek parmazánu, sůl, pepř, petržel",
+        "description": "1. Uvařte fettuccine podle pokynů na obalu. \n2. Ochutnejte kuřecí prsa solí a pepřem, poté uvařte do hotova. \n3. V jiné pánvi ohřejte smetanu a přidejte parmazán. \n4. Nařežte uvařené kuřecí maso a smíchejte s omáčkou Alfredo. \n5. Podávejte přes uvařené fettuccine, ozdobte petrželí."
+    },
+    {
+        "name": "Rajská polévka",
+        "ingredients": "500g rajčat, 1 cibule, 2 brambory, 2 mrkve, 1 paprika, 1 lžíce oleje, sůl, pepř, tymián",
+        "description": "1. Nakrájejte rajčata, cibuli, brambory, mrkev a papriku na kousky. \n2. Na pánvi rozehřejte olej a osmažte cibuli. \n3. Přidejte rajčata, brambory, mrkev a papriku. Podlijte vodou. \n4. Vařte do měkka. Přidávejte sůl, pepř a tymián podle chuti. \n5. Podávejte teplou."
+    },
+    {
+        "name": "Bramborový salát",
+        "ingredients": "500g brambor, 3 vejce, 100g nakládaných okurek, 1 cibule, 200g hrášku, 100g majonézy, sůl, pepř",
+        "description": "1. Uvařte brambory ve slupce, nechte vychladnout a oloupejte. \n2. Nakrájejte brambory, vejce, okurky a cibuli na malé kousky. \n3. Smíchejte brambory, vejce, okurky, cibuli a hrášek. \n4. Přidejte majonézu a dobře promíchejte. \n5. Dochutíme solí a pepřem."
+    },
+    {
+        "name": "Květáková polévka",
+        "ingredients": "1 květák, 2 brambory, 1 cibule, 1 mrkev, 1 lžíce oleje, 1 l zeleninového vývaru, sůl, pepř, muškátový oříšek",
+        "description": "1. Nakrájejte květák na růžičky, brambory a mrkev na kostičky. \n2. Na pánvi rozehřejte olej a osmažte nakrájenou cibuli. \n3. Přidejte květák, brambory, mrkev a zalijte vývarem. \n4. Vařte do měkka. \n5. Dochutíme solí, pepřem a muškátovým oříškem."
+    }
+]

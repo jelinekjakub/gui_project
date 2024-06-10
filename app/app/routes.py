@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template
 from app.models import User, Recipe
-from extensions.auth import auth
+from app.auth import auth
 from datetime import datetime
 bp = Blueprint('route', __name__)
 
@@ -76,4 +76,8 @@ def remove_recipe(id):
 
 @bp.route('/user-recipes/<user_id>')
 def user_recipes(user_id):
-    return render_template('user_recipes.html', recipes=Recipe().index(user_id=user_id), datetime=datetime, user_id=user_id)
+    return render_template('user_recipes.html',
+                           recipes=Recipe().index(user_id=user_id),
+                           datetime=datetime,
+                           user_id=int(user_id)
+                           )
