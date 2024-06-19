@@ -1,6 +1,7 @@
 # Load .env file variables
 from dotenv import load_dotenv, dotenv_values
 
+
 class Config:
     # Load variables from the specified .env file
     def load_env(self):
